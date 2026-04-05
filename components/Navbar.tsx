@@ -67,7 +67,7 @@ export default function Navbar() {
                     className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                       isActive
                         ? "bg-[#00D4AA]/10 text-[#00D4AA] border border-[#00D4AA]/20"
-                        : "text-[#9CA3AF] hover:text-white hover:bg-[#0D1117]"
+                        : "text-[#9CA3AF] hover:text-white hover:bg-[#0F1620]"
                     }`}
                   >
                     <link.icon size={15} />
@@ -80,7 +80,7 @@ export default function Navbar() {
             {/* Hamburger */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 rounded-lg text-[#9CA3AF] hover:text-white hover:bg-[#0D1117] transition-colors"
+              className="md:hidden p-2 rounded-lg text-[#9CA3AF] hover:text-white hover:bg-[#0F1620] transition-colors"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={22} /> : <Menu size={22} />}
@@ -113,7 +113,7 @@ export default function Navbar() {
                 className={`flex items-center gap-3 px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
                   isActive
                     ? "bg-[#00D4AA]/10 text-[#00D4AA] border border-[#00D4AA]/20"
-                    : "text-[#9CA3AF] hover:text-white hover:bg-[#0D1117]"
+                    : "text-[#9CA3AF] hover:text-white hover:bg-[#0F1620]"
                 }`}
               >
                 <link.icon size={18} />
@@ -124,7 +124,7 @@ export default function Navbar() {
           <div className="pt-2 border-t border-[#1E3A2F] mt-2">
             <Link
               href="/about"
-              className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-[#9CA3AF] hover:text-white hover:bg-[#0D1117] transition-all"
+              className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-[#9CA3AF] hover:text-white hover:bg-[#0F1620] transition-all"
             >
               About TaxWisely
             </Link>

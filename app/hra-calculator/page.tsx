@@ -179,7 +179,7 @@ export default function HRACalculatorPage() {
             {hraRules.map((rule) => (
               <div
                 key={rule}
-                className="flex items-center gap-3 bg-[#0D1117] border border-[#1E3A2F] rounded-lg px-4 py-3"
+                className="flex items-center gap-3 bg-[#0F1620] border border-[#1E3A2F] rounded-lg px-4 py-3"
               >
                 <CheckCircle size={16} className="text-[#00D4AA] shrink-0" />
                 <span className="text-sm text-[#9CA3AF]">{rule}</span>
@@ -192,7 +192,7 @@ export default function HRACalculatorPage() {
         <FAQSection faqs={faqs} />
 
         {/* Disclaimer */}
-        <div className="mt-8 p-4 bg-[#0D1117] border border-[#1E3A2F] rounded-xl">
+        <div className="mt-8 p-4 bg-[#0F1620] border border-[#1E3A2F] rounded-xl">
           <p className="text-xs text-[#6B7280] leading-relaxed">
             HRA calculations are based on Section 10(13A) of the Income Tax Act, 1961 and Rule 2A of the Income Tax Rules.
             This calculator is for FY 2025-26 (AY 2026-27). For personalised tax advice, consult a qualified Chartered Accountant.

@@ -10,8 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         background: "#080C10",
-        "card-bg": "#0D1117",
-        "card-hover": "#111822",
+        "card-bg": "#0F1620",
+        "card-hover": "#162030",
         accent: "#00D4AA",
         "accent-hover": "#00B894",
         "text-primary": "#FFFFFF",

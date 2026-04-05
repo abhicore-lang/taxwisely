@@ -61,7 +61,7 @@ function Tooltip({ text }: { text: string }) {
         <Info size={13} />
       </button>
       {open && (
-        <div className="absolute left-0 top-6 z-50 w-64 bg-[#111822] border border-[#1E3A2F] rounded-lg p-3 text-xs text-[#9CA3AF] shadow-xl leading-relaxed">
+        <div className="absolute left-0 top-6 z-50 w-64 bg-[#162030] border border-[#1E3A2F] rounded-lg p-3 text-xs text-[#9CA3AF] shadow-xl leading-relaxed">
           {text}
         </div>
       )}
@@ -617,7 +617,7 @@ export default function RegimeComparator() {
                 ? "bg-[#00D4AA]/10 border-[#00D4AA]/30"
                 : result.winner === "old"
                 ? "bg-emerald-500/10 border-emerald-500/30"
-                : "bg-[#0D1117] border-[#1E3A2F]"
+                : "bg-[#0F1620] border-[#1E3A2F]"
             }`}
           >
             <CheckCircle

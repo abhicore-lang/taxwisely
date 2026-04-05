@@ -133,7 +133,7 @@ export default function HomePage() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {features.map((f) => (
-            <div key={f.title} className="flex items-start gap-3 px-4 py-3 rounded-xl bg-[#0D1117] border border-[#1E3A2F]">
+            <div key={f.title} className="flex items-start gap-3 px-4 py-3 rounded-xl bg-[#0F1620] border border-[#1E3A2F]">
               <div className="w-8 h-8 bg-[#00D4AA]/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
                 <f.icon size={16} className="text-[#00D4AA]" />
               </div>
@@ -204,7 +204,7 @@ export default function HomePage() {
 
       {/* Disclaimer */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-        <div className="bg-[#0D1117] border border-[#1E3A2F] rounded-xl p-5">
+        <div className="bg-[#0F1620] border border-[#1E3A2F] rounded-xl p-5">
           <p className="text-xs text-[#6B7280] text-center leading-relaxed">
             All calculations are based on Income Tax Act provisions for FY 2025-26 (AY 2026-27) as per Budget 2025.
             TaxWisely is for informational purposes only. For personalised tax advice, consult a qualified Chartered Accountant.

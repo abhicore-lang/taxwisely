@@ -103,7 +103,7 @@ export default function SalaryCalculator() {
         isNetTakeHome
           ? "bg-[#00D4AA]/10"
           : isTotal
-          ? "bg-[#0D1117]"
+          ? "bg-[#0F1620]"
           : ""
       }`}
     >
@@ -302,7 +302,7 @@ export default function SalaryCalculator() {
 
           {/* Payslip table */}
           <div className="card overflow-hidden p-0">
-            <div className="px-5 py-4 border-b border-[#1E3A2F] bg-[#111822]">
+            <div className="px-5 py-4 border-b border-[#1E3A2F] bg-[#162030]">
               <h3 className="font-bold text-white font-heading">Salary Breakup Statement</h3>
               <p className="text-xs text-[#6B7280] mt-0.5">
                 {inputs.useNewRegime ? "New Tax Regime" : "Old Tax Regime"} •{" "}

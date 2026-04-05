@@ -158,7 +158,7 @@ export default function SalaryCalculatorPage() {
         <FAQSection faqs={faqs} />
 
         {/* Disclaimer */}
-        <div className="mt-8 p-4 bg-[#0D1117] border border-[#1E3A2F] rounded-xl">
+        <div className="mt-8 p-4 bg-[#0F1620] border border-[#1E3A2F] rounded-xl">
           <p className="text-xs text-[#6B7280] leading-relaxed">
             Salary calculations are estimates based on standard industry salary structures for FY 2025-26.
             Actual deductions may vary based on your employer&apos;s HR policy, state of employment, and individual circumstances.

@@ -15,7 +15,7 @@ export default function AdBanner({ position, className = "" }: AdBannerProps) {
   return (
     <div
       className={`w-full ${heightClass} border border-dashed border-[#1E3A2F] rounded-lg
-        flex items-center justify-center bg-[#0D1117]/40 ${className}`}
+        flex items-center justify-center bg-[#0F1620]/40 ${className}`}
       aria-label="Advertisement"
     >
       {/* Replace with Google AdSense code */}

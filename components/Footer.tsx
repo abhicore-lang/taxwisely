@@ -81,7 +81,7 @@ export default function Footer() {
             </ul>
 
             {/* Disclaimer note */}
-            <div className="mt-6 p-3 bg-[#0D1117] border border-[#1E3A2F] rounded-lg">
+            <div className="mt-6 p-3 bg-[#0F1620] border border-[#1E3A2F] rounded-lg">
               <p className="text-[#6B7280] text-xs leading-relaxed">
                 Calculations are for informational purposes only. Consult a qualified CA for personalised tax advice.
               </p>

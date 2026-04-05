@@ -307,7 +307,7 @@ export default function PayslipExplainerPage() {
             {commonMistakes.map((item) => (
               <div
                 key={item.mistake}
-                className="flex items-start gap-3 bg-[#0D1117] border border-[#1E3A2F] rounded-xl p-4"
+                className="flex items-start gap-3 bg-[#0F1620] border border-[#1E3A2F] rounded-xl p-4"
               >
                 <AlertTriangle size={16} className="text-amber-400 shrink-0 mt-0.5" />
                 <div>
@@ -326,14 +326,14 @@ export default function PayslipExplainerPage() {
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-[#1E3A2F] bg-[#111822]">
+                  <tr className="border-b border-[#1E3A2F] bg-[#162030]">
                     <th className="py-2.5 px-4 text-left text-xs font-semibold text-[#6B7280] uppercase tracking-wider">Term</th>
                     <th className="py-2.5 px-4 text-left text-xs font-semibold text-[#6B7280] uppercase tracking-wider">Meaning</th>
                   </tr>
                 </thead>
                 <tbody>
                   {glossary.map((item, i) => (
-                    <tr key={i} className="border-b border-[#1E3A2F]/50 hover:bg-[#111822] transition-colors">
+                    <tr key={i} className="border-b border-[#1E3A2F]/50 hover:bg-[#162030] transition-colors">
                       <td className="py-2.5 px-4 text-sm font-semibold text-[#00D4AA] whitespace-nowrap">
                         {item.term}
                       </td>

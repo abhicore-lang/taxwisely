@@ -236,7 +236,7 @@ export default function RegimePage() {
         <FAQSection faqs={faqs} />
 
         {/* Disclaimer */}
-        <div className="mt-8 p-4 bg-[#0D1117] border border-[#1E3A2F] rounded-xl">
+        <div className="mt-8 p-4 bg-[#0F1620] border border-[#1E3A2F] rounded-xl">
           <p className="text-xs text-[#6B7280] leading-relaxed">
             Tax regime comparison is based on Finance Act 2025 provisions for FY 2025-26 (AY 2026-27).
             Surcharge calculations are not included for simplicity. For personalised advice, consult a qualified Chartered Accountant.

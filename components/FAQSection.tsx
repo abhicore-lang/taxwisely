@@ -25,8 +25,8 @@ export default function FAQSection({ faqs, title = "Frequently Asked Questions" 
             key={i}
             className={`border rounded-xl overflow-hidden transition-all duration-200 ${
               openIndex === i
-                ? "border-[#00D4AA]/40 bg-[#0D1117]"
-                : "border-[#1E3A2F] bg-[#0D1117] hover:border-[#00D4AA]/30"
+                ? "border-[#00D4AA]/40 bg-[#0F1620]"
+                : "border-[#1E3A2F] bg-[#0F1620] hover:border-[#00D4AA]/30"
             }`}
           >
             <button

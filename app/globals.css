@@ -5,7 +5,7 @@
 @layer base {
   :root {
     --background: #080C10;
-    --card-bg: #0D1117;
+    --card-bg: #0F1620;
     --accent: #00D4AA;
     --text-primary: #FFFFFF;
     --text-secondary: #9CA3AF;
@@ -78,14 +78,14 @@
   }
 
   .btn-secondary {
-    @apply bg-[#0D1117] hover:bg-[#111822] text-white font-semibold px-6 py-3 rounded-lg
+    @apply bg-[#0F1620] hover:bg-[#162030] text-white font-semibold px-6 py-3 rounded-lg
            border border-[#1E3A2F] hover:border-[#00D4AA] transition-all duration-200 cursor-pointer
            focus:outline-none focus:ring-2 focus:ring-[#00D4AA] focus:ring-offset-2
            focus:ring-offset-[#080C10];
   }
 
   .card {
-    @apply bg-[#0D1117] border border-[#1E3A2F] rounded-xl p-6 transition-all duration-200;
+    @apply bg-[#0F1620] border border-[#1E3A2F] rounded-xl p-6 transition-all duration-200;
   }
 
   .card-hover {
