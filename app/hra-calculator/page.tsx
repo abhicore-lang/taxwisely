@@ -6,12 +6,12 @@ import AdBanner from "@/components/AdBanner";
 import { CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "HRA Calculator 2025-26 — Calculate HRA Exemption & Download Rent Receipt | TaxWisely",
+  title: "HRA Calculator 2026-27 — Calculate HRA Exemption & Download Rent Receipt | TaxWisely",
   description:
     "Calculate your HRA tax exemption instantly. Enter basic salary, HRA and rent to know exactly how much HRA is tax free. Download rent receipt PDF free.",
   alternates: { canonical: "https://taxwisely.in/hra-calculator" },
   openGraph: {
-    title: "HRA Calculator 2025-26 — Calculate HRA Exemption & Download Rent Receipt",
+    title: "HRA Calculator 2026-27 — Calculate HRA Exemption & Download Rent Receipt",
     description:
       "Calculate your HRA tax exemption instantly. Download rent receipt PDF free.",
     url: "https://taxwisely.in/hra-calculator",
@@ -111,10 +111,10 @@ export default function HRACalculatorPage() {
         {/* Hero */}
         <div className="mb-8">
           <div className="inline-flex items-center gap-2 bg-[#00D4AA]/10 border border-[#00D4AA]/20 rounded-full px-3 py-1 mb-3">
-            <span className="text-xs text-[#00D4AA] font-medium">FY 2025-26 / 2026-27</span>
+            <span className="text-xs text-[#00D4AA] font-medium">FY 2026-27 / 2026-27</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-white font-heading mb-3">
-            HRA Calculator 2025-26
+            HRA Calculator 2026-27
           </h1>
           <p className="text-[#9CA3AF] max-w-2xl">
             Calculate your exact HRA tax exemption under Section 10(13A) of the Income Tax Act.
@@ -195,7 +195,7 @@ export default function HRACalculatorPage() {
         <div className="mt-8 p-4 bg-[#0F1620] border border-[#1E3A2F] rounded-xl">
           <p className="text-xs text-[#6B7280] leading-relaxed">
             HRA calculations are based on Section 10(13A) of the Income Tax Act, 1961 and Rule 2A of the Income Tax Rules.
-            This calculator is for FY 2025-26 (AY 2026-27). For personalised tax advice, consult a qualified Chartered Accountant.
+            This calculator is for FY 2026-27 (AY 2027-28). For personalised tax advice, consult a qualified Chartered Accountant.
           </p>
         </div>
       </div>

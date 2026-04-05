@@ -191,7 +191,7 @@ export default function RegimeComparator() {
       {max && <span className="text-xs text-[#6B7280]">({max})</span>}
       {badge && (
         <span className="text-[10px] font-semibold bg-amber-500/20 text-amber-400 border border-amber-500/30 px-1.5 py-0.5 rounded-full">
-          Budget 2025
+          Budget 2026
         </span>
       )}
       {senior && (
@@ -374,7 +374,7 @@ export default function RegimeComparator() {
                   text="Savings/FD Interest — 80TTB (₹)"
                   max="max ₹1,00,000"
                   badge
-                  tooltip="Senior citizens (60+) can deduct up to ₹1,00,000 on interest from savings accounts, FDs, and post office deposits. Budget 2025 doubled this limit from ₹50,000."
+                  tooltip="Senior citizens (60+) can deduct up to ₹1,00,000 on interest from savings accounts, FDs, and post office deposits. Budget 2026 doubled this limit from ₹50,000."
                 />
                 <input
                   type="number"
@@ -391,7 +391,7 @@ export default function RegimeComparator() {
                   text="Savings Account Interest — 80TTA (₹)"
                   max="max ₹50,000"
                   badge
-                  tooltip="Interest earned on savings bank accounts is exempt up to ₹50,000 (Budget 2025 increased from ₹10,000). Only savings account interest — NOT FD interest. For below 60 years."
+                  tooltip="Interest earned on savings bank accounts is exempt up to ₹50,000 (Budget 2026 increased from ₹10,000). Only savings account interest — NOT FD interest. For below 60 years."
                 />
                 <input
                   type="number"

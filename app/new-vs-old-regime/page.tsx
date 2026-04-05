@@ -4,13 +4,13 @@ import FAQSection, { FAQSchema } from "@/components/FAQSection";
 import AdBanner from "@/components/AdBanner";
 
 export const metadata: Metadata = {
-  title: "New vs Old Tax Regime Calculator 2025-26 — Which is Better? | TaxWisely",
+  title: "New vs Old Tax Regime Calculator 2026-27 — Which is Better? | TaxWisely",
   description:
     "Compare new and old tax regime for your salary. Instant calculation showing which regime saves more tax in 2025-26.",
   alternates: { canonical: "https://taxwisely.in/new-vs-old-regime" },
   openGraph: {
-    title: "New vs Old Tax Regime Calculator 2025-26 — Which is Better?",
-    description: "Compare new and old tax regime. Instant calculation for FY 2025-26.",
+    title: "New vs Old Tax Regime Calculator 2026-27 — Which is Better?",
+    description: "Compare new and old tax regime. Instant calculation for FY 2026-27.",
     url: "https://taxwisely.in/new-vs-old-regime",
   },
 };
@@ -60,7 +60,7 @@ const pageSchema = {
   "@type": "WebApplication",
   name: "New vs Old Tax Regime Calculator — TaxWisely",
   url: "https://taxwisely.in/new-vs-old-regime",
-  description: "Compare new and old tax regime for FY 2025-26",
+  description: "Compare new and old tax regime for FY 2026-27",
   applicationCategory: "FinanceApplication",
   operatingSystem: "Any",
   offers: { "@type": "Offer", price: "0", priceCurrency: "INR" },
@@ -98,14 +98,14 @@ export default function RegimePage() {
         {/* Hero */}
         <div className="mb-8">
           <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-3 py-1 mb-3">
-            <span className="text-xs text-emerald-400 font-medium">Budget 2025 Updated</span>
+            <span className="text-xs text-emerald-400 font-medium">Budget 2026 Updated</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-white font-heading mb-3">
             New vs Old Tax Regime Comparator
           </h1>
           <p className="text-[#9CA3AF] max-w-2xl">
             Enter your annual income and deductions to instantly compare both tax regimes.
-            We&apos;ll show you exactly which option saves more tax in FY 2025-26.
+            We&apos;ll show you exactly which option saves more tax in FY 2026-27.
           </p>
         </div>
 
@@ -118,7 +118,7 @@ export default function RegimePage() {
         {/* Tax Slabs reference */}
         <section className="mt-12">
           <h2 className="text-xl font-bold text-white font-heading mb-6">
-            Tax Slab Rates for FY 2025-26
+            Tax Slab Rates for FY 2026-27
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -238,7 +238,7 @@ export default function RegimePage() {
         {/* Disclaimer */}
         <div className="mt-8 p-4 bg-[#0F1620] border border-[#1E3A2F] rounded-xl">
           <p className="text-xs text-[#6B7280] leading-relaxed">
-            Tax regime comparison is based on Finance Act 2025 provisions for FY 2025-26 (AY 2026-27).
+            Tax regime comparison is based on Finance Act 2026 provisions for FY 2026-27 (AY 2027-28).
             Surcharge calculations are not included for simplicity. For personalised advice, consult a qualified Chartered Accountant.
           </p>
         </div>

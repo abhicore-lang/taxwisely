@@ -4,12 +4,12 @@ import FAQSection, { FAQSchema } from "@/components/FAQSection";
 import AdBanner from "@/components/AdBanner";
 
 export const metadata: Metadata = {
-  title: "CTC to In-Hand Salary Calculator 2025-26 | TaxWisely",
+  title: "CTC to In-Hand Salary Calculator 2026-27 | TaxWisely",
   description:
-    "Convert your CTC to exact in-hand salary. See full salary breakup including PF, tax, HRA and all deductions. Updated for FY 2025-26.",
+    "Convert your CTC to exact in-hand salary. See full salary breakup including PF, tax, HRA and all deductions. Updated for FY 2026-27.",
   alternates: { canonical: "https://taxwisely.in/salary-calculator" },
   openGraph: {
-    title: "CTC to In-Hand Salary Calculator 2025-26",
+    title: "CTC to In-Hand Salary Calculator 2026-27",
     description: "Convert your CTC to exact in-hand salary with full breakup.",
     url: "https://taxwisely.in/salary-calculator",
   },
@@ -86,7 +86,7 @@ export default function SalaryCalculatorPage() {
         {/* Hero */}
         <div className="mb-8">
           <div className="inline-flex items-center gap-2 bg-[#00D4AA]/10 border border-[#00D4AA]/20 rounded-full px-3 py-1 mb-3">
-            <span className="text-xs text-[#00D4AA] font-medium">FY 2025-26</span>
+            <span className="text-xs text-[#00D4AA] font-medium">FY 2026-27</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-white font-heading mb-3">
             CTC to In-Hand Salary Calculator
@@ -160,7 +160,7 @@ export default function SalaryCalculatorPage() {
         {/* Disclaimer */}
         <div className="mt-8 p-4 bg-[#0F1620] border border-[#1E3A2F] rounded-xl">
           <p className="text-xs text-[#6B7280] leading-relaxed">
-            Salary calculations are estimates based on standard industry salary structures for FY 2025-26.
+            Salary calculations are estimates based on standard industry salary structures for FY 2026-27.
             Actual deductions may vary based on your employer&apos;s HR policy, state of employment, and individual circumstances.
             Consult your HR department or a CA for exact calculations.
           </p>

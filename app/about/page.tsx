@@ -19,9 +19,9 @@ const breadcrumbSchema = {
 };
 
 const commitments = [
-  "Tax slabs updated from official Budget 2025 notifications",
+  "Tax slabs updated from official Budget 2026 notifications",
   "HRA calculation follows Section 10(13A) and Rule 2A exactly",
-  "New regime rebate limits verified against Finance Act 2025",
+  "New regime rebate limits verified against Finance Act 2026",
   "All three HRA rules calculated correctly before finding minimum",
   "PF calculation based on EPFO guidelines",
   "Cess calculated at 4% on total income tax liability",
@@ -95,7 +95,7 @@ export default function AboutPage() {
           </div>
           <div className="mt-4 px-4 py-3 bg-[#080C10] border border-[#1E3A2F] rounded-lg">
             <p className="text-xs text-[#6B7280]">
-              All calculations based on Income Tax Act 2025-26 (Assessment Year 2026-27) as per Finance Act 2025.
+              All calculations based on Income Tax Act 2026-27 (Assessment Year 2026-27) as per Finance Act 2026.
               Last updated: April 2026.
             </p>
           </div>

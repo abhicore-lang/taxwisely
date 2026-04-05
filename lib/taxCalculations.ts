@@ -1,6 +1,6 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // TaxWisely — Tax Calculation Logic
-// Based on Income Tax Act 2025-26 (Budget 2025)
+// Based on Income Tax Act 2026-27 (Budget 2026)
 // ─────────────────────────────────────────────────────────────────────────────
 
 // ─── Indian Number Formatting ────────────────────────────────────────────────
@@ -147,8 +147,8 @@ export interface OldRegimeInputs {
   section80EEA: number;           // max 1,50,000 — affordable housing extra
   nps80CCD: number;               // max 50,000
   section80E: number;             // education loan interest — no cap
-  section80TTA: number;           // savings interest <60 — max 50,000 (Budget 2025)
-  section80TTB: number;           // savings/FD interest 60+ — max 1,00,000 (Budget 2025)
+  section80TTA: number;           // savings interest <60 — max 50,000 (Budget 2026)
+  section80TTB: number;           // savings/FD interest 60+ — max 1,00,000 (Budget 2026)
   section80GG_monthlyRent: number;// rent without HRA — 3-way min calculated inside
   section80G: number;             // donations — 50% applied conservatively
   section80DD: number;            // disabled dependent — max 1,25,000

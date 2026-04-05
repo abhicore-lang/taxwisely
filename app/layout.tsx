@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     template: "%s | TaxWisely",
   },
   description:
-    "Calculate HRA exemption, compare new vs old tax regime, and understand your salary. Free tools for salaried Indians. Based on Budget 2025-26.",
+    "Calculate HRA exemption, compare new vs old tax regime, and understand your salary. Free tools for salaried Indians. Based on Budget 2026.",
   keywords: [
     "HRA calculator",
     "tax regime calculator",
     "salary calculator",
     "income tax calculator India",
-    "new vs old regime 2025",
+    "new vs old regime 2026",
     "payslip explainer",
     "rent receipt PDF",
   ],

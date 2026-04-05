@@ -35,7 +35,7 @@ export default function Footer() {
             </p>
             <div className="mt-4 flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-xs text-[#9CA3AF]">Based on Income Tax Act 2025-26</span>
+              <span className="text-xs text-[#9CA3AF]">Based on Income Tax Act 2026-27</span>
             </div>
           </div>
 
@@ -97,7 +97,7 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <span className="text-[#6B7280] text-xs">Last updated: April 2026</span>
             <span className="text-[#1E3A2F]">|</span>
-            <span className="text-[#6B7280] text-xs">FY 2025-26</span>
+            <span className="text-[#6B7280] text-xs">FY 2026-27</span>
           </div>
         </div>
       </div>

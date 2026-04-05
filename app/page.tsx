@@ -6,7 +6,7 @@ import AdBanner from "@/components/AdBanner";
 export const metadata: Metadata = {
   title: "TaxWisely — Free Tax Calculator for Salaried Indians",
   description:
-    "Calculate HRA exemption, compare new vs old tax regime, and understand your salary. Free tools for salaried Indians. Based on Budget 2025-26.",
+    "Calculate HRA exemption, compare new vs old tax regime, and understand your salary. Free tools for salaried Indians. Based on Budget 2026.",
   alternates: { canonical: "https://taxwisely.in" },
 };
 
@@ -25,7 +25,7 @@ const tools = [
   {
     href: "/new-vs-old-regime",
     icon: TrendingUp,
-    badge: "Budget 2025",
+    badge: "Budget 2026",
     badgeColor: "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30",
     title: "New vs Old Regime",
     description:
@@ -70,7 +70,7 @@ const features = [
   },
   {
     icon: RefreshCw,
-    title: "Budget 2025-26",
+    title: "Budget 2026",
     description: "Updated with latest tax slabs, rebates and standard deductions.",
   },
 ];
@@ -105,7 +105,7 @@ export default function HomePage() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 text-center">
         <div className="inline-flex items-center gap-2 bg-[#00D4AA]/10 border border-[#00D4AA]/20 rounded-full px-4 py-1.5 mb-6">
           <div className="w-2 h-2 bg-[#00D4AA] rounded-full animate-pulse" />
-          <span className="text-sm text-[#00D4AA] font-medium">Updated for Budget 2025-26</span>
+          <span className="text-sm text-[#00D4AA] font-medium">Updated for Budget 2026</span>
         </div>
 
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white font-heading leading-tight mb-5">
@@ -206,7 +206,7 @@ export default function HomePage() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="bg-[#0F1620] border border-[#1E3A2F] rounded-xl p-5">
           <p className="text-xs text-[#6B7280] text-center leading-relaxed">
-            All calculations are based on Income Tax Act provisions for FY 2025-26 (AY 2026-27) as per Budget 2025.
+            All calculations are based on Income Tax Act provisions for FY 2026-27 (AY 2027-28) as per Budget 2026.
             TaxWisely is for informational purposes only. For personalised tax advice, consult a qualified Chartered Accountant.
           </p>
         </div>

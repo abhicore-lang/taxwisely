@@ -3,13 +3,13 @@ import AdBanner from "@/components/AdBanner";
 import { TrendingUp, TrendingDown, AlertTriangle, CheckCircle, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "How to Read Your Payslip — Complete Guide for Freshers 2025 | TaxWisely",
+  title: "How to Read Your Payslip — Complete Guide for Freshers 2026 | TaxWisely",
   description:
     "First job? Learn to read your payslip. Simple explanation of basic salary, HRA, PF, TDS and every payslip component. Complete guide for Indian freshers.",
   keywords: ["how to read payslip India", "payslip explained", "first payslip guide", "salary slip components India"],
   alternates: { canonical: "https://taxwisely.in/payslip-explainer" },
   openGraph: {
-    title: "How to Read Your Payslip — Complete Guide for Freshers 2025",
+    title: "How to Read Your Payslip — Complete Guide for Freshers 2026",
     description: "Learn every component of your payslip. Simple guide for freshers.",
     url: "https://taxwisely.in/payslip-explainer",
   },
