@@ -138,12 +138,33 @@ export function calculateNewRegimeTax(grossIncome: number): {
 // Standard deduction: ₹50,000
 export interface OldRegimeInputs {
   grossIncome: number;
+  age: number;                    // default 30 if not provided; gates senior limits
   hraExemption: number;
-  section80C: number;        // max 1,50,000
-  section80D: number;        // max 25,000
-  homeLoanInterest24b: number; // max 2,00,000
-  nps80CCD: number;          // max 50,000
+  ltaExemption: number;           // Section 10(5) — no cap
+  section80C: number;             // max 1,50,000
+  section80D: number;             // max 25,000 (<60) or 50,000 (60+)
+  homeLoanInterest24b: number;    // max 2,00,000
+  section80EEA: number;           // max 1,50,000 — affordable housing extra
+  nps80CCD: number;               // max 50,000
+  section80E: number;             // education loan interest — no cap
+  section80TTA: number;           // savings interest <60 — max 50,000 (Budget 2025)
+  section80TTB: number;           // savings/FD interest 60+ — max 1,00,000 (Budget 2025)
+  section80GG_monthlyRent: number;// rent without HRA — 3-way min calculated inside
+  section80G: number;             // donations — 50% applied conservatively
+  section80DD: number;            // disabled dependent — max 1,25,000
+  section80DDB: number;           // specified disease — max 40,000 (<60) or 1,00,000 (60+)
+  section80U: number;             // self disability — max 1,25,000
   otherDeductions: number;
+}
+
+// Helper: 80GG three-way minimum
+function calc80GG(monthlyRent: number, grossIncome: number): number {
+  if (monthlyRent <= 0) return 0;
+  const annualRent = monthlyRent * 12;
+  const cap1 = 5000 * 12;                                    // ₹60,000/year
+  const cap2 = 0.25 * grossIncome;                           // 25% of gross
+  const cap3 = Math.max(0, annualRent - 0.10 * grossIncome); // rent - 10% income
+  return Math.min(cap1, cap2, cap3);
 }
 
 export function calculateOldRegimeTax(inputs: OldRegimeInputs): {
@@ -158,27 +179,63 @@ export function calculateOldRegimeTax(inputs: OldRegimeInputs): {
 } {
   const {
     grossIncome,
+    age = 30,
     hraExemption,
+    ltaExemption,
     section80C,
     section80D,
     homeLoanInterest24b,
+    section80EEA,
     nps80CCD,
+    section80E,
+    section80TTA,
+    section80TTB,
+    section80GG_monthlyRent,
+    section80G,
+    section80DD,
+    section80DDB,
+    section80U,
     otherDeductions,
   } = inputs;
 
+  const isSenior = age >= 60;
+
   const standardDeduction = 50000;
   const capped80C = Math.min(section80C, 150000);
-  const capped80D = Math.min(section80D, 25000);
+  const max80D = isSenior ? 50000 : 25000;
+  const capped80D = Math.min(section80D, max80D);
   const cappedHomeLoan = Math.min(homeLoanInterest24b, 200000);
+  const capped80EEA = Math.min(section80EEA, 150000);
   const cappedNPS = Math.min(nps80CCD, 50000);
+  const capped80E = section80E;                              // no cap
+  // 80TTA vs 80TTB — use the applicable one based on age (guard: never use both)
+  const capped80TTA = isSenior ? 0 : Math.min(section80TTA, 50000);
+  const capped80TTB = isSenior ? Math.min(section80TTB, 100000) : 0;
+  // 80GG — only if no HRA (guard enforced here too)
+  const capped80GG = hraExemption > 0 ? 0 : calc80GG(section80GG_monthlyRent, grossIncome);
+  const capped80G = section80G * 0.50;                       // conservative 50% deduction
+  const capped80DD = Math.min(section80DD, 125000);
+  const max80DDB = isSenior ? 100000 : 40000;
+  const capped80DDB = Math.min(section80DDB, max80DDB);
+  const capped80U = Math.min(section80U, 125000);
 
   const totalDeductions =
     standardDeduction +
     hraExemption +
+    ltaExemption +
     capped80C +
     capped80D +
     cappedHomeLoan +
+    capped80EEA +
     cappedNPS +
+    capped80E +
+    capped80TTA +
+    capped80TTB +
+    capped80GG +
+    capped80G +
+    capped80DD +
+    capped80DDB +
+    capped80U +
     otherDeductions;
 
   const taxableIncome = Math.max(0, grossIncome - totalDeductions);
@@ -209,13 +266,24 @@ export function calculateOldRegimeTax(inputs: OldRegimeInputs): {
   const totalTax = taxBeforeCess + cess;
   const effectiveRate = grossIncome > 0 ? (totalTax / grossIncome) * 100 : 0;
 
-  const deductionBreakup = {
+  const deductionBreakup: Record<string, number> = {
     "Standard Deduction": standardDeduction,
-    "HRA Exemption": hraExemption,
+    "HRA Exemption [10(13A)]": hraExemption,
+    "LTA Exemption [10(5)]": ltaExemption,
     "Section 80C": capped80C,
-    "Section 80D": capped80D,
+    [`Section 80D${isSenior ? " (Senior)" : ""}`]: capped80D,
     "Home Loan Interest (24b)": cappedHomeLoan,
+    "Affordable Housing 80EEA": capped80EEA,
     "NPS 80CCD(1B)": cappedNPS,
+    "Education Loan Interest 80E": capped80E,
+    ...(isSenior
+      ? { "Savings/FD Interest 80TTB": capped80TTB }
+      : { "Savings Interest 80TTA": capped80TTA }),
+    "Rent Without HRA (80GG)": capped80GG,
+    "Donations 80G (50%)": capped80G,
+    "Disabled Dependent 80DD": capped80DD,
+    "Specified Disease 80DDB": capped80DDB,
+    "Self Disability 80U": capped80U,
     "Other Deductions": otherDeductions,
   };
 
@@ -317,11 +385,22 @@ export function calculateSalaryBreakup(inputs: SalaryInputs): SalaryResult {
   } else {
     const { totalTax } = calculateOldRegimeTax({
       grossIncome: grossAnnual,
+      age: 30,
       hraExemption: hraExemptionResult.annualExemption,
+      ltaExemption: 0,
       section80C: otherDeductions80C,
       section80D: otherDeductions80D,
       homeLoanInterest24b: 0,
+      section80EEA: 0,
       nps80CCD: 0,
+      section80E: 0,
+      section80TTA: 0,
+      section80TTB: 0,
+      section80GG_monthlyRent: 0,
+      section80G: 0,
+      section80DD: 0,
+      section80DDB: 0,
+      section80U: 0,
       otherDeductions: 0,
     });
     incomeTaxAnnual = totalTax;
