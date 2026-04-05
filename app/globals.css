@@ -4,12 +4,12 @@
 
 @layer base {
   :root {
-    --background: #0F1117;
-    --card-bg: #1A1D27;
-    --accent: #3B82F6;
+    --background: #080C10;
+    --card-bg: #0D1117;
+    --accent: #00D4AA;
     --text-primary: #FFFFFF;
     --text-secondary: #9CA3AF;
-    --border: #2D3748;
+    --border: #1E3A2F;
   }
 
   * {
@@ -23,7 +23,7 @@
   }
 
   body {
-    background-color: #0F1117;
+    background-color: #080C10;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -50,50 +50,50 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #0F1117;
+    background: #080C10;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #2D3748;
+    background: #1E3A2F;
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #3B82F6;
+    background: #00D4AA;
   }
 }
 
 @layer components {
   .input-field {
-    @apply w-full bg-[#0F1117] border border-[#2D3748] rounded-lg px-4 py-3 text-white
-           placeholder-[#6B7280] focus:outline-none focus:border-[#3B82F6] focus:ring-1
-           focus:ring-[#3B82F6] transition-all duration-200 text-base;
+    @apply w-full bg-[#080C10] border border-[#1E3A2F] rounded-lg px-4 py-3 text-white
+           placeholder-[#6B7280] focus:outline-none focus:border-[#00D4AA] focus:ring-1
+           focus:ring-[#00D4AA] transition-all duration-200 text-base;
   }
 
   .btn-primary {
-    @apply bg-[#3B82F6] hover:bg-[#2563EB] text-white font-semibold px-6 py-3 rounded-lg
+    @apply bg-[#00D4AA] hover:bg-[#00B894] text-white font-semibold px-6 py-3 rounded-lg
            transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed
-           focus:outline-none focus:ring-2 focus:ring-[#3B82F6] focus:ring-offset-2
-           focus:ring-offset-[#0F1117];
+           focus:outline-none focus:ring-2 focus:ring-[#00D4AA] focus:ring-offset-2
+           focus:ring-offset-[#080C10];
   }
 
   .btn-secondary {
-    @apply bg-[#1A1D27] hover:bg-[#1E2235] text-white font-semibold px-6 py-3 rounded-lg
-           border border-[#2D3748] hover:border-[#3B82F6] transition-all duration-200 cursor-pointer
-           focus:outline-none focus:ring-2 focus:ring-[#3B82F6] focus:ring-offset-2
-           focus:ring-offset-[#0F1117];
+    @apply bg-[#0D1117] hover:bg-[#111822] text-white font-semibold px-6 py-3 rounded-lg
+           border border-[#1E3A2F] hover:border-[#00D4AA] transition-all duration-200 cursor-pointer
+           focus:outline-none focus:ring-2 focus:ring-[#00D4AA] focus:ring-offset-2
+           focus:ring-offset-[#080C10];
   }
 
   .card {
-    @apply bg-[#1A1D27] border border-[#2D3748] rounded-xl p-6 transition-all duration-200;
+    @apply bg-[#0D1117] border border-[#1E3A2F] rounded-xl p-6 transition-all duration-200;
   }
 
   .card-hover {
-    @apply hover:border-[#3B82F6] hover:shadow-lg hover:shadow-[#3B82F6]/10;
+    @apply hover:border-[#00D4AA] hover:shadow-lg hover:shadow-[#00D4AA]/10;
   }
 
   .result-card {
-    @apply bg-[#0F1117] border border-[#3B82F6]/30 rounded-xl p-5 animate-fade-in;
+    @apply bg-[#080C10] border border-[#00D4AA]/30 rounded-xl p-5 animate-fade-in;
   }
 
   .label {
@@ -109,7 +109,7 @@
   }
 
   .highlight-value {
-    @apply text-2xl font-bold text-[#3B82F6];
+    @apply text-2xl font-bold text-[#00D4AA];
   }
 
   .tag-green {
@@ -128,6 +128,6 @@
   }
 
   .divider {
-    @apply border-t border-[#2D3748] my-4;
+    @apply border-t border-[#1E3A2F] my-4;
   }
 }

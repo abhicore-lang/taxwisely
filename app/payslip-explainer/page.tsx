@@ -206,7 +206,7 @@ export default function PayslipExplainerPage() {
               { title: "Deductions", desc: "PF, professional tax, TDS — amounts subtracted from your gross." },
               { title: "Net Take-Home", desc: "Final amount deposited in your bank = Gross – Deductions." },
             ].map((item) => (
-              <div key={item.title} className="bg-[#0F1117] border border-[#2D3748] rounded-lg p-3.5">
+              <div key={item.title} className="bg-[#080C10] border border-[#1E3A2F] rounded-lg p-3.5">
                 <p className="text-white font-semibold text-sm mb-1">{item.title}</p>
                 <p className="text-[#9CA3AF] text-xs">{item.desc}</p>
               </div>
@@ -238,8 +238,8 @@ export default function PayslipExplainerPage() {
                   <span className="shrink-0 tag-green">{item.taxability}</span>
                 </div>
                 <p className="text-[#9CA3AF] text-sm mb-2">{item.description}</p>
-                <div className="flex items-start gap-2 bg-[#0F1117] rounded-lg px-3 py-2">
-                  <CheckCircle size={13} className="text-[#3B82F6] mt-0.5 shrink-0" />
+                <div className="flex items-start gap-2 bg-[#080C10] rounded-lg px-3 py-2">
+                  <CheckCircle size={13} className="text-[#00D4AA] mt-0.5 shrink-0" />
                   <p className="text-xs text-[#9CA3AF]">{item.tip}</p>
                 </div>
               </div>
@@ -267,8 +267,8 @@ export default function PayslipExplainerPage() {
                   <span className="shrink-0 tag-blue">{item.taxability}</span>
                 </div>
                 <p className="text-[#9CA3AF] text-sm mb-2">{item.description}</p>
-                <div className="flex items-start gap-2 bg-[#0F1117] rounded-lg px-3 py-2">
-                  <CheckCircle size={13} className="text-[#3B82F6] mt-0.5 shrink-0" />
+                <div className="flex items-start gap-2 bg-[#080C10] rounded-lg px-3 py-2">
+                  <CheckCircle size={13} className="text-[#00D4AA] mt-0.5 shrink-0" />
                   <p className="text-xs text-[#9CA3AF]">{item.tip}</p>
                 </div>
               </div>
@@ -288,8 +288,8 @@ export default function PayslipExplainerPage() {
             <div className="space-y-2.5">
               {checklistItems.map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded border border-[#3B82F6]/50 bg-[#3B82F6]/10 flex items-center justify-center shrink-0 mt-0.5">
-                    <span className="text-[#3B82F6] text-xs font-bold">{i + 1}</span>
+                  <div className="w-5 h-5 rounded border border-[#00D4AA]/50 bg-[#00D4AA]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-[#00D4AA] text-xs font-bold">{i + 1}</span>
                   </div>
                   <p className="text-sm text-[#9CA3AF]">{item}</p>
                 </div>
@@ -307,7 +307,7 @@ export default function PayslipExplainerPage() {
             {commonMistakes.map((item) => (
               <div
                 key={item.mistake}
-                className="flex items-start gap-3 bg-[#1A1D27] border border-[#2D3748] rounded-xl p-4"
+                className="flex items-start gap-3 bg-[#0D1117] border border-[#1E3A2F] rounded-xl p-4"
               >
                 <AlertTriangle size={16} className="text-amber-400 shrink-0 mt-0.5" />
                 <div>
@@ -326,15 +326,15 @@ export default function PayslipExplainerPage() {
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-[#2D3748] bg-[#1E2235]">
+                  <tr className="border-b border-[#1E3A2F] bg-[#111822]">
                     <th className="py-2.5 px-4 text-left text-xs font-semibold text-[#6B7280] uppercase tracking-wider">Term</th>
                     <th className="py-2.5 px-4 text-left text-xs font-semibold text-[#6B7280] uppercase tracking-wider">Meaning</th>
                   </tr>
                 </thead>
                 <tbody>
                   {glossary.map((item, i) => (
-                    <tr key={i} className="border-b border-[#2D3748]/50 hover:bg-[#1E2235] transition-colors">
-                      <td className="py-2.5 px-4 text-sm font-semibold text-[#3B82F6] whitespace-nowrap">
+                    <tr key={i} className="border-b border-[#1E3A2F]/50 hover:bg-[#111822] transition-colors">
+                      <td className="py-2.5 px-4 text-sm font-semibold text-[#00D4AA] whitespace-nowrap">
                         {item.term}
                       </td>
                       <td className="py-2.5 px-4 text-sm text-[#9CA3AF]">{item.definition}</td>
@@ -348,7 +348,7 @@ export default function PayslipExplainerPage() {
 
         {/* CTA to tools */}
         <section className="mb-8">
-          <div className="bg-[#3B82F6]/10 border border-[#3B82F6]/20 rounded-xl p-6 text-center">
+          <div className="bg-[#00D4AA]/10 border border-[#00D4AA]/20 rounded-xl p-6 text-center">
             <h3 className="text-lg font-bold text-white font-heading mb-2">
               Now understand your numbers
             </h3>

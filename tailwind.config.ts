@@ -9,14 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0F1117",
-        "card-bg": "#1A1D27",
-        "card-hover": "#1E2235",
-        accent: "#3B82F6",
-        "accent-hover": "#2563EB",
+        background: "#080C10",
+        "card-bg": "#0D1117",
+        "card-hover": "#111822",
+        accent: "#00D4AA",
+        "accent-hover": "#00B894",
         "text-primary": "#FFFFFF",
         "text-secondary": "#9CA3AF",
-        border: "#2D3748",
+        border: "#1E3A2F",
         success: "#10B981",
         warning: "#F59E0B",
         danger: "#EF4444",

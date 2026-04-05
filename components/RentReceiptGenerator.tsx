@@ -85,8 +85,8 @@ export default function RentReceiptGenerator() {
   return (
     <div className="card">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 bg-[#3B82F6]/10 rounded-lg flex items-center justify-center">
-          <FileText size={20} className="text-[#3B82F6]" />
+        <div className="w-10 h-10 bg-[#00D4AA]/10 rounded-lg flex items-center justify-center">
+          <FileText size={20} className="text-[#00D4AA]" />
         </div>
         <div>
           <h2 className="text-lg font-bold text-white font-heading">Download Rent Receipt</h2>

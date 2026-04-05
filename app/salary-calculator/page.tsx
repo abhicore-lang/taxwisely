@@ -85,8 +85,8 @@ export default function SalaryCalculatorPage() {
 
         {/* Hero */}
         <div className="mb-8">
-          <div className="inline-flex items-center gap-2 bg-[#3B82F6]/10 border border-[#3B82F6]/20 rounded-full px-3 py-1 mb-3">
-            <span className="text-xs text-[#3B82F6] font-medium">FY 2025-26</span>
+          <div className="inline-flex items-center gap-2 bg-[#00D4AA]/10 border border-[#00D4AA]/20 rounded-full px-3 py-1 mb-3">
+            <span className="text-xs text-[#00D4AA] font-medium">FY 2025-26</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-white font-heading mb-3">
             CTC to In-Hand Salary Calculator
@@ -158,7 +158,7 @@ export default function SalaryCalculatorPage() {
         <FAQSection faqs={faqs} />
 
         {/* Disclaimer */}
-        <div className="mt-8 p-4 bg-[#1A1D27] border border-[#2D3748] rounded-xl">
+        <div className="mt-8 p-4 bg-[#0D1117] border border-[#1E3A2F] rounded-xl">
           <p className="text-xs text-[#6B7280] leading-relaxed">
             Salary calculations are estimates based on standard industry salary structures for FY 2025-26.
             Actual deductions may vary based on your employer&apos;s HR policy, state of employment, and individual circumstances.

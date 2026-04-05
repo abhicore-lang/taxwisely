@@ -110,8 +110,8 @@ export default function HRACalculatorPage() {
 
         {/* Hero */}
         <div className="mb-8">
-          <div className="inline-flex items-center gap-2 bg-[#3B82F6]/10 border border-[#3B82F6]/20 rounded-full px-3 py-1 mb-3">
-            <span className="text-xs text-[#3B82F6] font-medium">FY 2025-26 / 2026-27</span>
+          <div className="inline-flex items-center gap-2 bg-[#00D4AA]/10 border border-[#00D4AA]/20 rounded-full px-3 py-1 mb-3">
+            <span className="text-xs text-[#00D4AA] font-medium">FY 2025-26 / 2026-27</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-white font-heading mb-3">
             HRA Calculator 2025-26
@@ -158,8 +158,8 @@ export default function HRACalculatorPage() {
                   desc: "Actual rent paid minus 10% of your basic salary. If rent is less than 10% of basic, this becomes zero.",
                 },
               ].map((rule) => (
-                <div key={rule.number} className="bg-[#0F1117] border border-[#2D3748] rounded-xl p-4">
-                  <div className="w-8 h-8 bg-[#3B82F6] rounded-lg flex items-center justify-center text-white font-bold text-sm mb-3">
+                <div key={rule.number} className="bg-[#080C10] border border-[#1E3A2F] rounded-xl p-4">
+                  <div className="w-8 h-8 bg-[#00D4AA] rounded-lg flex items-center justify-center text-white font-bold text-sm mb-3">
                     {rule.number}
                   </div>
                   <h3 className="font-semibold text-white text-sm mb-1.5">{rule.title}</h3>
@@ -179,9 +179,9 @@ export default function HRACalculatorPage() {
             {hraRules.map((rule) => (
               <div
                 key={rule}
-                className="flex items-center gap-3 bg-[#1A1D27] border border-[#2D3748] rounded-lg px-4 py-3"
+                className="flex items-center gap-3 bg-[#0D1117] border border-[#1E3A2F] rounded-lg px-4 py-3"
               >
-                <CheckCircle size={16} className="text-[#3B82F6] shrink-0" />
+                <CheckCircle size={16} className="text-[#00D4AA] shrink-0" />
                 <span className="text-sm text-[#9CA3AF]">{rule}</span>
               </div>
             ))}
@@ -192,7 +192,7 @@ export default function HRACalculatorPage() {
         <FAQSection faqs={faqs} />
 
         {/* Disclaimer */}
-        <div className="mt-8 p-4 bg-[#1A1D27] border border-[#2D3748] rounded-xl">
+        <div className="mt-8 p-4 bg-[#0D1117] border border-[#1E3A2F] rounded-xl">
           <p className="text-xs text-[#6B7280] leading-relaxed">
             HRA calculations are based on Section 10(13A) of the Income Tax Act, 1961 and Rule 2A of the Income Tax Rules.
             This calculator is for FY 2025-26 (AY 2026-27). For personalised tax advice, consult a qualified Chartered Accountant.

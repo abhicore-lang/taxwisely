@@ -55,13 +55,13 @@ function Tooltip({ text }: { text: string }) {
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="ml-1 text-[#6B7280] hover:text-[#3B82F6] transition-colors focus:outline-none"
+        className="ml-1 text-[#6B7280] hover:text-[#00D4AA] transition-colors focus:outline-none"
         aria-label="More info"
       >
         <Info size={13} />
       </button>
       {open && (
-        <div className="absolute left-0 top-6 z-50 w-64 bg-[#1E2235] border border-[#2D3748] rounded-lg p-3 text-xs text-[#9CA3AF] shadow-xl leading-relaxed">
+        <div className="absolute left-0 top-6 z-50 w-64 bg-[#111822] border border-[#1E3A2F] rounded-lg p-3 text-xs text-[#9CA3AF] shadow-xl leading-relaxed">
           {text}
         </div>
       )}
@@ -245,7 +245,7 @@ export default function RegimeComparator() {
         </div>
 
         {/* ── Old Regime Deductions Box ── */}
-        <div className="border border-[#2D3748] rounded-xl p-4 mb-5">
+        <div className="border border-[#1E3A2F] rounded-xl p-4 mb-5">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <span className="text-xs font-semibold text-[#9CA3AF] uppercase tracking-wider">
@@ -277,7 +277,7 @@ export default function RegimeComparator() {
                 onChange={(e) => handleChange("hraExemption", e.target.value)}
               />
               {!hasHRA && (
-                <p className="text-xs text-[#3B82F6] mt-1">
+                <p className="text-xs text-[#00D4AA] mt-1">
                   No HRA? You may qualify for 80GG ↓
                 </p>
               )}
@@ -427,7 +427,7 @@ export default function RegimeComparator() {
               setShowMore((s) => !s);
               if (!showMore) fireGA("show_more_deductions_clicked", { tool: "regime_comparator" });
             }}
-            className="w-full flex items-center justify-between px-4 py-2.5 rounded-lg border border-[#2D3748] hover:border-[#3B82F6]/40 text-[#9CA3AF] hover:text-white transition-all text-sm"
+            className="w-full flex items-center justify-between px-4 py-2.5 rounded-lg border border-[#1E3A2F] hover:border-[#00D4AA]/40 text-[#9CA3AF] hover:text-white transition-all text-sm"
           >
             <span className="flex items-center gap-2">
               {showMore ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
@@ -470,7 +470,7 @@ export default function RegimeComparator() {
                     </div>
                   )}
                   {hasHRA && (
-                    <div className="flex items-center gap-2 col-span-full bg-[#0F1117] border border-[#2D3748] rounded-lg px-4 py-3">
+                    <div className="flex items-center gap-2 col-span-full bg-[#080C10] border border-[#1E3A2F] rounded-lg px-4 py-3">
                       <Info size={14} className="text-[#6B7280] shrink-0" />
                       <p className="text-xs text-[#6B7280]">
                         80GG is not applicable when you receive HRA from your employer.
@@ -614,17 +614,17 @@ export default function RegimeComparator() {
           <div
             className={`rounded-xl px-5 py-4 flex items-center gap-3 border ${
               result.winner === "new"
-                ? "bg-[#3B82F6]/10 border-[#3B82F6]/30"
+                ? "bg-[#00D4AA]/10 border-[#00D4AA]/30"
                 : result.winner === "old"
                 ? "bg-emerald-500/10 border-emerald-500/30"
-                : "bg-[#1A1D27] border-[#2D3748]"
+                : "bg-[#0D1117] border-[#1E3A2F]"
             }`}
           >
             <CheckCircle
               size={22}
               className={
                 result.winner === "new"
-                  ? "text-[#3B82F6]"
+                  ? "text-[#00D4AA]"
                   : result.winner === "old"
                   ? "text-emerald-400"
                   : "text-[#9CA3AF]"
@@ -651,11 +651,11 @@ export default function RegimeComparator() {
           {/* Side by side */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* New Regime */}
-            <div className={`card ${result.winner === "new" ? "border-[#3B82F6]/50 bg-[#3B82F6]/5" : ""}`}>
+            <div className={`card ${result.winner === "new" ? "border-[#00D4AA]/50 bg-[#00D4AA]/5" : ""}`}>
               <div className="flex items-center justify-between mb-4">
                 <h3 className="font-semibold text-white font-heading">New Regime</h3>
                 {result.winner === "new" && (
-                  <span className="text-xs bg-[#3B82F6] text-white px-2.5 py-1 rounded-full font-medium">
+                  <span className="text-xs bg-[#00D4AA] text-white px-2.5 py-1 rounded-full font-medium">
                     Recommended
                   </span>
                 )}
@@ -669,7 +669,7 @@ export default function RegimeComparator() {
                   <span className="text-[#9CA3AF]">Standard Deduction</span>
                   <span className="text-emerald-400">- {formatIndianCurrency(75000)}</span>
                 </div>
-                <div className="flex justify-between text-sm border-t border-[#2D3748] pt-2">
+                <div className="flex justify-between text-sm border-t border-[#1E3A2F] pt-2">
                   <span className="text-[#9CA3AF]">Taxable Income</span>
                   <span className="text-white font-medium">{formatIndianCurrency(result.newRegime.taxableIncome)}</span>
                 </div>
@@ -686,9 +686,9 @@ export default function RegimeComparator() {
                     87A Rebate Applied — Tax = ₹0
                   </div>
                 )}
-                <div className="flex justify-between border-t border-[#2D3748] pt-2">
+                <div className="flex justify-between border-t border-[#1E3A2F] pt-2">
                   <span className="text-[#9CA3AF] font-medium">Total Tax Payable</span>
-                  <span className="text-xl font-bold text-[#3B82F6]">
+                  <span className="text-xl font-bold text-[#00D4AA]">
                     {formatIndianCurrency(result.newRegime.totalTax)}
                   </span>
                 </div>
@@ -698,9 +698,9 @@ export default function RegimeComparator() {
                 </div>
               </div>
               <div className="mt-4">
-                <div className="h-2 bg-[#0F1117] rounded-full overflow-hidden">
+                <div className="h-2 bg-[#080C10] rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-[#3B82F6] rounded-full transition-all duration-700"
+                    className="h-full bg-[#00D4AA] rounded-full transition-all duration-700"
                     style={{ width: `${(result.newRegime.totalTax / maxTax) * 100}%` }}
                   />
                 </div>
@@ -726,7 +726,7 @@ export default function RegimeComparator() {
                   <span className="text-[#9CA3AF]">Total Deductions</span>
                   <span className="text-emerald-400">- {formatIndianCurrency(result.oldRegime.totalDeductions)}</span>
                 </div>
-                <div className="flex justify-between text-sm border-t border-[#2D3748] pt-2">
+                <div className="flex justify-between text-sm border-t border-[#1E3A2F] pt-2">
                   <span className="text-[#9CA3AF]">Taxable Income</span>
                   <span className="text-white font-medium">{formatIndianCurrency(result.oldRegime.taxableIncome)}</span>
                 </div>
@@ -743,7 +743,7 @@ export default function RegimeComparator() {
                     87A Rebate Applied — Tax = ₹0
                   </div>
                 )}
-                <div className="flex justify-between border-t border-[#2D3748] pt-2">
+                <div className="flex justify-between border-t border-[#1E3A2F] pt-2">
                   <span className="text-[#9CA3AF] font-medium">Total Tax Payable</span>
                   <span className="text-xl font-bold text-emerald-400">
                     {formatIndianCurrency(result.oldRegime.totalTax)}
@@ -755,7 +755,7 @@ export default function RegimeComparator() {
                 </div>
               </div>
               <div className="mt-4">
-                <div className="h-2 bg-[#0F1117] rounded-full overflow-hidden">
+                <div className="h-2 bg-[#080C10] rounded-full overflow-hidden">
                   <div
                     className="h-full bg-emerald-400 rounded-full transition-all duration-700"
                     style={{ width: `${(result.oldRegime.totalTax / maxTax) * 100}%` }}
@@ -769,13 +769,13 @@ export default function RegimeComparator() {
           {Object.values(result.oldRegime.deductionBreakup).some((v) => v > 0) && (
             <div className="card">
               <div className="flex items-center gap-2 mb-4">
-                <Info size={16} className="text-[#3B82F6]" />
+                <Info size={16} className="text-[#00D4AA]" />
                 <h3 className="font-semibold text-white">Old Regime — Full Deduction Breakdown</h3>
               </div>
               <div className="space-y-2">
                 {Object.entries(result.oldRegime.deductionBreakup).map(([key, val]) =>
                   val > 0 ? (
-                    <div key={key} className="flex justify-between text-sm py-1.5 border-b border-[#2D3748]/50">
+                    <div key={key} className="flex justify-between text-sm py-1.5 border-b border-[#1E3A2F]/50">
                       <span className="text-[#9CA3AF]">{key}</span>
                       <span className="text-emerald-400 font-medium">{formatIndianCurrency(val)}</span>
                     </div>

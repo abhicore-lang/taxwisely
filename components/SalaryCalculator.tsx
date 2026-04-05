@@ -99,18 +99,18 @@ export default function SalaryCalculator() {
     isNetTakeHome?: boolean;
   }) => (
     <tr
-      className={`border-b border-[#2D3748]/50 ${
+      className={`border-b border-[#1E3A2F]/50 ${
         isNetTakeHome
-          ? "bg-[#3B82F6]/10"
+          ? "bg-[#00D4AA]/10"
           : isTotal
-          ? "bg-[#1A1D27]"
+          ? "bg-[#0D1117]"
           : ""
       }`}
     >
       <td
         className={`py-2.5 px-4 text-sm ${
           isNetTakeHome
-            ? "text-[#3B82F6] font-bold"
+            ? "text-[#00D4AA] font-bold"
             : isTotal
             ? "text-white font-semibold"
             : "text-[#9CA3AF]"
@@ -121,7 +121,7 @@ export default function SalaryCalculator() {
       <td
         className={`py-2.5 px-4 text-sm text-right ${
           isNetTakeHome
-            ? "text-[#3B82F6] font-bold"
+            ? "text-[#00D4AA] font-bold"
             : isTotal
             ? "text-white font-semibold"
             : isEarning
@@ -134,7 +134,7 @@ export default function SalaryCalculator() {
       <td
         className={`py-2.5 px-4 text-sm text-right ${
           isNetTakeHome
-            ? "text-[#3B82F6] font-bold"
+            ? "text-[#00D4AA] font-bold"
             : isTotal
             ? "text-white font-semibold"
             : isEarning
@@ -150,7 +150,7 @@ export default function SalaryCalculator() {
   return (
     <div>
       {restoredFromLS && (
-        <div className="mb-4 flex items-center gap-2 text-xs text-[#3B82F6] bg-[#3B82F6]/10 border border-[#3B82F6]/20 rounded-lg px-4 py-2.5">
+        <div className="mb-4 flex items-center gap-2 text-xs text-[#00D4AA] bg-[#00D4AA]/10 border border-[#00D4AA]/20 rounded-lg px-4 py-2.5">
           <CheckCircle size={14} />
           Your last calculation has been restored.
         </div>
@@ -161,11 +161,11 @@ export default function SalaryCalculator() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-6">
           <div>
             <label className="label">Tax Regime</label>
-            <div className="flex rounded-lg border border-[#2D3748] overflow-hidden">
+            <div className="flex rounded-lg border border-[#1E3A2F] overflow-hidden">
               <button
                 onClick={() => handleChange("useNewRegime", true)}
                 className={`flex-1 py-2.5 text-sm font-medium transition-all ${
-                  inputs.useNewRegime ? "bg-[#3B82F6] text-white" : "text-[#9CA3AF] hover:text-white"
+                  inputs.useNewRegime ? "bg-[#00D4AA] text-white" : "text-[#9CA3AF] hover:text-white"
                 }`}
               >
                 New Regime
@@ -173,7 +173,7 @@ export default function SalaryCalculator() {
               <button
                 onClick={() => handleChange("useNewRegime", false)}
                 className={`flex-1 py-2.5 text-sm font-medium transition-all ${
-                  !inputs.useNewRegime ? "bg-[#3B82F6] text-white" : "text-[#9CA3AF] hover:text-white"
+                  !inputs.useNewRegime ? "bg-[#00D4AA] text-white" : "text-[#9CA3AF] hover:text-white"
                 }`}
               >
                 Old Regime
@@ -182,11 +182,11 @@ export default function SalaryCalculator() {
           </div>
           <div>
             <label className="label">City Type</label>
-            <div className="flex rounded-lg border border-[#2D3748] overflow-hidden">
+            <div className="flex rounded-lg border border-[#1E3A2F] overflow-hidden">
               <button
                 onClick={() => handleChange("isMetro", true)}
                 className={`flex-1 py-2.5 text-sm font-medium transition-all ${
-                  inputs.isMetro ? "bg-[#3B82F6] text-white" : "text-[#9CA3AF] hover:text-white"
+                  inputs.isMetro ? "bg-[#00D4AA] text-white" : "text-[#9CA3AF] hover:text-white"
                 }`}
               >
                 Metro
@@ -194,7 +194,7 @@ export default function SalaryCalculator() {
               <button
                 onClick={() => handleChange("isMetro", false)}
                 className={`flex-1 py-2.5 text-sm font-medium transition-all ${
-                  !inputs.isMetro ? "bg-[#3B82F6] text-white" : "text-[#9CA3AF] hover:text-white"
+                  !inputs.isMetro ? "bg-[#00D4AA] text-white" : "text-[#9CA3AF] hover:text-white"
                 }`}
               >
                 Non-Metro
@@ -286,7 +286,7 @@ export default function SalaryCalculator() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
             <div className="result-card text-center py-6">
               <p className="text-sm text-[#9CA3AF] mb-1">Monthly Take-Home</p>
-              <p className="text-4xl font-bold text-[#3B82F6] font-heading">
+              <p className="text-4xl font-bold text-[#00D4AA] font-heading">
                 {formatIndianCurrency(result.netTakeHomeMonthly)}
               </p>
               <p className="text-xs text-[#6B7280] mt-2">per month</p>
@@ -302,7 +302,7 @@ export default function SalaryCalculator() {
 
           {/* Payslip table */}
           <div className="card overflow-hidden p-0">
-            <div className="px-5 py-4 border-b border-[#2D3748] bg-[#1E2235]">
+            <div className="px-5 py-4 border-b border-[#1E3A2F] bg-[#111822]">
               <h3 className="font-bold text-white font-heading">Salary Breakup Statement</h3>
               <p className="text-xs text-[#6B7280] mt-0.5">
                 {inputs.useNewRegime ? "New Tax Regime" : "Old Tax Regime"} •{" "}
@@ -313,7 +313,7 @@ export default function SalaryCalculator() {
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-[#2D3748]">
+                  <tr className="border-b border-[#1E3A2F]">
                     <th className="py-2.5 px-4 text-left text-xs font-semibold text-[#6B7280] uppercase tracking-wider">
                       Component
                     </th>
@@ -327,7 +327,7 @@ export default function SalaryCalculator() {
                 </thead>
                 <tbody>
                   {/* Earnings */}
-                  <tr className="bg-emerald-500/5 border-b border-[#2D3748]">
+                  <tr className="bg-emerald-500/5 border-b border-[#1E3A2F]">
                     <td colSpan={3} className="py-2 px-4 text-xs font-semibold text-emerald-400 uppercase tracking-wider">
                       Earnings
                     </td>
@@ -343,7 +343,7 @@ export default function SalaryCalculator() {
                   <Row label="Gross Salary" monthly={result.grossMonthly} annual={result.grossAnnual} isEarning isTotal />
 
                   {/* Deductions */}
-                  <tr className="bg-red-500/5 border-b border-[#2D3748]">
+                  <tr className="bg-red-500/5 border-b border-[#1E3A2F]">
                     <td colSpan={3} className="py-2 px-4 text-xs font-semibold text-red-400 uppercase tracking-wider">
                       Deductions
                     </td>
@@ -382,7 +382,7 @@ export default function SalaryCalculator() {
             </div>
 
             {/* Employer contribution note */}
-            <div className="px-5 py-3 bg-[#0F1117]/50 border-t border-[#2D3748]">
+            <div className="px-5 py-3 bg-[#080C10]/50 border-t border-[#1E3A2F]">
               <p className="text-xs text-[#6B7280]">
                 * Employer PF contribution of{" "}
                 <span className="text-[#9CA3AF]">{formatIndianCurrency(result.employerPFMonthly)}/month</span>{" "}

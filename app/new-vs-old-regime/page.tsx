@@ -126,7 +126,7 @@ export default function RegimePage() {
             <div className="card">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="font-bold text-white font-heading">New Regime Slabs</h3>
-                <span className="text-xs bg-[#3B82F6]/10 text-[#3B82F6] border border-[#3B82F6]/20 px-2.5 py-1 rounded-full">
+                <span className="text-xs bg-[#00D4AA]/10 text-[#00D4AA] border border-[#00D4AA]/20 px-2.5 py-1 rounded-full">
                   Default from FY 2024-25
                 </span>
               </div>
@@ -134,7 +134,7 @@ export default function RegimePage() {
                 {newSlabs.map((slab, i) => (
                   <div
                     key={i}
-                    className="flex justify-between items-center py-2.5 border-b border-[#2D3748]/50 last:border-0"
+                    className="flex justify-between items-center py-2.5 border-b border-[#1E3A2F]/50 last:border-0"
                   >
                     <span className="text-sm text-[#9CA3AF]">{slab.range}</span>
                     <span className={`text-sm font-bold ${slab.rate === "0%" ? "text-emerald-400" : "text-white"}`}>
@@ -143,9 +143,9 @@ export default function RegimePage() {
                   </div>
                 ))}
               </div>
-              <div className="mt-3 pt-3 border-t border-[#2D3748] space-y-1.5">
-                <p className="text-xs text-[#3B82F6]">✓ Standard deduction: ₹75,000</p>
-                <p className="text-xs text-[#3B82F6]">✓ 87A Rebate: Tax = ₹0 if income ≤ ₹12,00,000</p>
+              <div className="mt-3 pt-3 border-t border-[#1E3A2F] space-y-1.5">
+                <p className="text-xs text-[#00D4AA]">✓ Standard deduction: ₹75,000</p>
+                <p className="text-xs text-[#00D4AA]">✓ 87A Rebate: Tax = ₹0 if income ≤ ₹12,00,000</p>
                 <p className="text-xs text-[#6B7280]">+ 4% Health & Education Cess on tax</p>
               </div>
             </div>
@@ -154,7 +154,7 @@ export default function RegimePage() {
             <div className="card">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="font-bold text-white font-heading">Old Regime Slabs</h3>
-                <span className="text-xs bg-[#2D3748] text-[#9CA3AF] px-2.5 py-1 rounded-full">
+                <span className="text-xs bg-[#1E3A2F] text-[#9CA3AF] px-2.5 py-1 rounded-full">
                   All deductions allowed
                 </span>
               </div>
@@ -162,7 +162,7 @@ export default function RegimePage() {
                 {oldSlabs.map((slab, i) => (
                   <div
                     key={i}
-                    className="flex justify-between items-center py-2.5 border-b border-[#2D3748]/50 last:border-0"
+                    className="flex justify-between items-center py-2.5 border-b border-[#1E3A2F]/50 last:border-0"
                   >
                     <span className="text-sm text-[#9CA3AF]">{slab.range}</span>
                     <span className={`text-sm font-bold ${slab.rate === "0%" ? "text-emerald-400" : "text-white"}`}>
@@ -171,7 +171,7 @@ export default function RegimePage() {
                   </div>
                 ))}
               </div>
-              <div className="mt-3 pt-3 border-t border-[#2D3748] space-y-1.5">
+              <div className="mt-3 pt-3 border-t border-[#1E3A2F] space-y-1.5">
                 <p className="text-xs text-emerald-400">✓ Standard deduction: ₹50,000</p>
                 <p className="text-xs text-emerald-400">✓ 87A Rebate: Tax = ₹0 if income ≤ ₹5,00,000</p>
                 <p className="text-xs text-emerald-400">✓ HRA, 80C, 80D, Home Loan all allowed</p>
@@ -187,23 +187,23 @@ export default function RegimePage() {
             When to Choose Which Regime?
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="bg-[#3B82F6]/5 border border-[#3B82F6]/20 rounded-xl p-5">
-              <h3 className="font-semibold text-[#3B82F6] mb-3">Choose New Regime if...</h3>
+            <div className="bg-[#00D4AA]/5 border border-[#00D4AA]/20 rounded-xl p-5">
+              <h3 className="font-semibold text-[#00D4AA] mb-3">Choose New Regime if...</h3>
               <ul className="space-y-2 text-sm text-[#9CA3AF]">
                 <li className="flex items-start gap-2">
-                  <span className="text-[#3B82F6] mt-0.5">→</span>
+                  <span className="text-[#00D4AA] mt-0.5">→</span>
                   You have minimal investments (80C, 80D)
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#3B82F6] mt-0.5">→</span>
+                  <span className="text-[#00D4AA] mt-0.5">→</span>
                   You don&apos;t have a home loan
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#3B82F6] mt-0.5">→</span>
+                  <span className="text-[#00D4AA] mt-0.5">→</span>
                   Your income is below ₹12 lakh (zero tax via rebate)
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#3B82F6] mt-0.5">→</span>
+                  <span className="text-[#00D4AA] mt-0.5">→</span>
                   You prefer simplicity with fewer forms
                 </li>
               </ul>
@@ -236,7 +236,7 @@ export default function RegimePage() {
         <FAQSection faqs={faqs} />
 
         {/* Disclaimer */}
-        <div className="mt-8 p-4 bg-[#1A1D27] border border-[#2D3748] rounded-xl">
+        <div className="mt-8 p-4 bg-[#0D1117] border border-[#1E3A2F] rounded-xl">
           <p className="text-xs text-[#6B7280] leading-relaxed">
             Tax regime comparison is based on Finance Act 2025 provisions for FY 2025-26 (AY 2026-27).
             Surcharge calculations are not included for simplicity. For personalised advice, consult a qualified Chartered Accountant.

@@ -42,7 +42,7 @@ export default function AboutPage() {
 
         {/* Hero */}
         <div className="mb-10">
-          <div className="w-14 h-14 bg-[#3B82F6] rounded-2xl flex items-center justify-center mb-4">
+          <div className="w-14 h-14 bg-[#00D4AA] rounded-2xl flex items-center justify-center mb-4">
             <span className="text-white font-bold text-2xl">T</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-white font-heading mb-3">
@@ -57,7 +57,7 @@ export default function AboutPage() {
         {/* Why we built it */}
         <section className="card mb-8">
           <div className="flex items-center gap-3 mb-4">
-            <Target size={20} className="text-[#3B82F6]" />
+            <Target size={20} className="text-[#00D4AA]" />
             <h2 className="text-lg font-bold text-white font-heading">Why TaxWisely?</h2>
           </div>
           <div className="space-y-3 text-sm text-[#9CA3AF] leading-relaxed">
@@ -93,7 +93,7 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-          <div className="mt-4 px-4 py-3 bg-[#0F1117] border border-[#2D3748] rounded-lg">
+          <div className="mt-4 px-4 py-3 bg-[#080C10] border border-[#1E3A2F] rounded-lg">
             <p className="text-xs text-[#6B7280]">
               All calculations based on Income Tax Act 2025-26 (Assessment Year 2026-27) as per Finance Act 2025.
               Last updated: April 2026.
@@ -104,7 +104,7 @@ export default function AboutPage() {
         {/* Privacy */}
         <section className="card mb-8" id="privacy">
           <div className="flex items-center gap-3 mb-4">
-            <Shield size={20} className="text-[#3B82F6]" />
+            <Shield size={20} className="text-[#00D4AA]" />
             <h2 className="text-lg font-bold text-white font-heading">Privacy Policy</h2>
           </div>
           <div className="space-y-3 text-sm text-[#9CA3AF] leading-relaxed">
@@ -164,7 +164,7 @@ export default function AboutPage() {
         {/* Contact */}
         <section className="card mb-8">
           <div className="flex items-center gap-3 mb-4">
-            <Mail size={20} className="text-[#3B82F6]" />
+            <Mail size={20} className="text-[#00D4AA]" />
             <h2 className="text-lg font-bold text-white font-heading">Contact</h2>
           </div>
           <p className="text-sm text-[#9CA3AF] mb-3">
@@ -172,7 +172,7 @@ export default function AboutPage() {
           </p>
           <a
             href="mailto:hello@taxwisely.in"
-            className="inline-flex items-center gap-2 text-[#3B82F6] text-sm font-medium hover:underline"
+            className="inline-flex items-center gap-2 text-[#00D4AA] text-sm font-medium hover:underline"
           >
             <Mail size={15} />
             hello@taxwisely.in

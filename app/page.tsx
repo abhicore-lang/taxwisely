@@ -15,7 +15,7 @@ const tools = [
     href: "/hra-calculator",
     icon: Calculator,
     badge: "Most Popular",
-    badgeColor: "bg-[#3B82F6] text-white",
+    badgeColor: "bg-[#00D4AA] text-white",
     title: "HRA Calculator",
     description:
       "Calculate your HRA tax exemption instantly. Know exactly how much HRA is tax-free and generate a professional rent receipt PDF.",
@@ -103,14 +103,14 @@ export default function HomePage() {
 
       {/* Hero */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 text-center">
-        <div className="inline-flex items-center gap-2 bg-[#3B82F6]/10 border border-[#3B82F6]/20 rounded-full px-4 py-1.5 mb-6">
-          <div className="w-2 h-2 bg-[#3B82F6] rounded-full animate-pulse" />
-          <span className="text-sm text-[#3B82F6] font-medium">Updated for Budget 2025-26</span>
+        <div className="inline-flex items-center gap-2 bg-[#00D4AA]/10 border border-[#00D4AA]/20 rounded-full px-4 py-1.5 mb-6">
+          <div className="w-2 h-2 bg-[#00D4AA] rounded-full animate-pulse" />
+          <span className="text-sm text-[#00D4AA] font-medium">Updated for Budget 2025-26</span>
         </div>
 
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white font-heading leading-tight mb-5">
           Tax Calculations.{" "}
-          <span className="text-[#3B82F6]">Made Simple.</span>
+          <span className="text-[#00D4AA]">Made Simple.</span>
         </h1>
 
         <p className="text-lg sm:text-xl text-[#9CA3AF] max-w-2xl mx-auto mb-8 leading-relaxed">
@@ -133,9 +133,9 @@ export default function HomePage() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {features.map((f) => (
-            <div key={f.title} className="flex items-start gap-3 px-4 py-3 rounded-xl bg-[#1A1D27] border border-[#2D3748]">
-              <div className="w-8 h-8 bg-[#3B82F6]/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-                <f.icon size={16} className="text-[#3B82F6]" />
+            <div key={f.title} className="flex items-start gap-3 px-4 py-3 rounded-xl bg-[#0D1117] border border-[#1E3A2F]">
+              <div className="w-8 h-8 bg-[#00D4AA]/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                <f.icon size={16} className="text-[#00D4AA]" />
               </div>
               <div>
                 <p className="text-sm font-semibold text-white">{f.title}</p>
@@ -160,8 +160,8 @@ export default function HomePage() {
               className="card card-hover group flex flex-col"
             >
               <div className="flex items-start justify-between mb-4">
-                <div className="w-12 h-12 bg-[#3B82F6]/10 rounded-xl flex items-center justify-center group-hover:bg-[#3B82F6]/20 transition-colors">
-                  <tool.icon size={24} className="text-[#3B82F6]" />
+                <div className="w-12 h-12 bg-[#00D4AA]/10 rounded-xl flex items-center justify-center group-hover:bg-[#00D4AA]/20 transition-colors">
+                  <tool.icon size={24} className="text-[#00D4AA]" />
                 </div>
                 {tool.badge && (
                   <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${tool.badgeColor}`}>
@@ -170,7 +170,7 @@ export default function HomePage() {
                 )}
               </div>
 
-              <h3 className="text-lg font-bold text-white font-heading mb-2 group-hover:text-[#3B82F6] transition-colors">
+              <h3 className="text-lg font-bold text-white font-heading mb-2 group-hover:text-[#00D4AA] transition-colors">
                 {tool.title}
               </h3>
 
@@ -182,14 +182,14 @@ export default function HomePage() {
                 {tool.features.map((f) => (
                   <span
                     key={f}
-                    className="text-xs bg-[#0F1117] border border-[#2D3748] text-[#9CA3AF] px-2.5 py-1 rounded-full"
+                    className="text-xs bg-[#080C10] border border-[#1E3A2F] text-[#9CA3AF] px-2.5 py-1 rounded-full"
                   >
                     {f}
                   </span>
                 ))}
               </div>
 
-              <div className="flex items-center text-[#3B82F6] text-sm font-semibold group-hover:gap-2 gap-1 transition-all">
+              <div className="flex items-center text-[#00D4AA] text-sm font-semibold group-hover:gap-2 gap-1 transition-all">
                 {tool.cta}
               </div>
             </Link>
@@ -204,7 +204,7 @@ export default function HomePage() {
 
       {/* Disclaimer */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-        <div className="bg-[#1A1D27] border border-[#2D3748] rounded-xl p-5">
+        <div className="bg-[#0D1117] border border-[#1E3A2F] rounded-xl p-5">
           <p className="text-xs text-[#6B7280] text-center leading-relaxed">
             All calculations are based on Income Tax Act provisions for FY 2025-26 (AY 2026-27) as per Budget 2025.
             TaxWisely is for informational purposes only. For personalised tax advice, consult a qualified Chartered Accountant.

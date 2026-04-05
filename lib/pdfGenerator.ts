@@ -69,7 +69,7 @@ export async function generateRentReceiptPDF(data: RentReceiptData): Promise<voi
   const contentWidth = pageWidth - margin * 2;
 
   // ── Background ────────────────────────────────────────────────────────────
-  doc.setFillColor(15, 17, 23); // #0F1117
+  doc.setFillColor(15, 17, 23); // #080C10
   doc.rect(0, 0, pageWidth, pageHeight, "F");
 
   // ── Border ────────────────────────────────────────────────────────────────

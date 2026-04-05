@@ -86,7 +86,7 @@ export default function HRACalculator() {
   return (
     <div>
       {restoredFromLS && (
-        <div className="mb-4 flex items-center gap-2 text-xs text-[#3B82F6] bg-[#3B82F6]/10 border border-[#3B82F6]/20 rounded-lg px-4 py-2.5">
+        <div className="mb-4 flex items-center gap-2 text-xs text-[#00D4AA] bg-[#00D4AA]/10 border border-[#00D4AA]/20 rounded-lg px-4 py-2.5">
           <CheckCircle size={14} />
           Your last calculation has been restored.
         </div>
@@ -96,12 +96,12 @@ export default function HRACalculator() {
         {/* Metro / Non-Metro toggle */}
         <div className="mb-6">
           <label className="label">City Type</label>
-          <div className="flex rounded-lg border border-[#2D3748] overflow-hidden w-fit">
+          <div className="flex rounded-lg border border-[#1E3A2F] overflow-hidden w-fit">
             <button
               onClick={() => handleChange("isMetro", true)}
               className={`px-5 py-2.5 text-sm font-medium transition-all duration-200 ${
                 inputs.isMetro
-                  ? "bg-[#3B82F6] text-white"
+                  ? "bg-[#00D4AA] text-white"
                   : "bg-transparent text-[#9CA3AF] hover:text-white"
               }`}
             >
@@ -111,7 +111,7 @@ export default function HRACalculator() {
               onClick={() => handleChange("isMetro", false)}
               className={`px-5 py-2.5 text-sm font-medium transition-all duration-200 ${
                 !inputs.isMetro
-                  ? "bg-[#3B82F6] text-white"
+                  ? "bg-[#00D4AA] text-white"
                   : "bg-transparent text-[#9CA3AF] hover:text-white"
               }`}
             >
@@ -121,7 +121,7 @@ export default function HRACalculator() {
           <p className="text-xs text-[#6B7280] mt-1.5">
             Metro cities (50%): Delhi, Mumbai, Chennai, Kolkata, Bengaluru, Hyderabad, Pune, Ahmedabad
           </p>
-          <p className="text-xs text-[#3B82F6]/70 mt-0.5">
+          <p className="text-xs text-[#00D4AA]/70 mt-0.5">
             Bengaluru, Hyderabad, Pune &amp; Ahmedabad added as metro effective FY 2026-27
           </p>
         </div>
@@ -175,7 +175,7 @@ export default function HRACalculator() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             <div className="result-card">
               <p className="text-xs text-[#9CA3AF] mb-1">Monthly HRA Exemption</p>
-              <p className="text-2xl font-bold text-[#3B82F6]">
+              <p className="text-2xl font-bold text-[#00D4AA]">
                 {formatIndianCurrency(result.monthlyExemption)}
               </p>
             </div>
@@ -202,7 +202,7 @@ export default function HRACalculator() {
           {/* Rule breakdown */}
           <div className="card">
             <div className="flex items-center gap-2 mb-4">
-              <Info size={16} className="text-[#3B82F6]" />
+              <Info size={16} className="text-[#00D4AA]" />
               <h3 className="font-semibold text-white">How Your Exemption Was Calculated</h3>
             </div>
             <p className="text-sm text-[#9CA3AF] mb-4">
@@ -215,16 +215,16 @@ export default function HRACalculator() {
                     key={i}
                     className={`flex items-center justify-between px-4 py-3 rounded-lg border transition-all ${
                       result.appliedRule === i + 1
-                        ? "border-[#3B82F6]/50 bg-[#3B82F6]/10"
-                        : "border-[#2D3748] bg-[#0F1117]"
+                        ? "border-[#00D4AA]/50 bg-[#00D4AA]/10"
+                        : "border-[#1E3A2F] bg-[#080C10]"
                     }`}
                   >
                     <div className="flex items-center gap-3">
                       <div
                         className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${
                           result.appliedRule === i + 1
-                            ? "bg-[#3B82F6] text-white"
-                            : "bg-[#2D3748] text-[#9CA3AF]"
+                            ? "bg-[#00D4AA] text-white"
+                            : "bg-[#1E3A2F] text-[#9CA3AF]"
                         }`}
                       >
                         {i + 1}
@@ -232,11 +232,11 @@ export default function HRACalculator() {
                       <span className="text-sm text-[#9CA3AF]">{ruleLabels[i]}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className={`font-semibold ${result.appliedRule === i + 1 ? "text-[#3B82F6]" : "text-white"}`}>
+                      <span className={`font-semibold ${result.appliedRule === i + 1 ? "text-[#00D4AA]" : "text-white"}`}>
                         {formatIndianCurrency(val)}
                       </span>
                       {result.appliedRule === i + 1 && (
-                        <span className="text-xs bg-[#3B82F6] text-white px-2 py-0.5 rounded-full font-medium">
+                        <span className="text-xs bg-[#00D4AA] text-white px-2 py-0.5 rounded-full font-medium">
                           Applied
                         </span>
                       )}

@@ -16,17 +16,17 @@ const infoLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#2D3748] bg-[#0D0F18] mt-16">
+    <footer className="border-t border-[#1E3A2F] bg-[#050810] mt-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-[#3B82F6] rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-[#00D4AA] rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">T</span>
               </div>
               <span className="text-white font-bold text-lg font-heading">
-                Tax<span className="text-[#3B82F6]">Wisely</span>
+                Tax<span className="text-[#00D4AA]">Wisely</span>
                 <span className="text-[#6B7280] text-sm font-normal">.in</span>
               </span>
             </Link>
@@ -47,11 +47,11 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="flex items-center gap-2 text-[#9CA3AF] hover:text-[#3B82F6] text-sm transition-colors duration-200 group"
+                    className="flex items-center gap-2 text-[#9CA3AF] hover:text-[#00D4AA] text-sm transition-colors duration-200 group"
                   >
                     <link.icon
                       size={14}
-                      className="text-[#3B82F6] group-hover:scale-110 transition-transform"
+                      className="text-[#00D4AA] group-hover:scale-110 transition-transform"
                     />
                     {link.label}
                   </Link>
@@ -68,11 +68,11 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="flex items-center gap-2 text-[#9CA3AF] hover:text-[#3B82F6] text-sm transition-colors duration-200 group"
+                    className="flex items-center gap-2 text-[#9CA3AF] hover:text-[#00D4AA] text-sm transition-colors duration-200 group"
                   >
                     <link.icon
                       size={14}
-                      className="text-[#6B7280] group-hover:text-[#3B82F6] transition-colors"
+                      className="text-[#6B7280] group-hover:text-[#00D4AA] transition-colors"
                     />
                     {link.label}
                   </Link>
@@ -81,7 +81,7 @@ export default function Footer() {
             </ul>
 
             {/* Disclaimer note */}
-            <div className="mt-6 p-3 bg-[#1A1D27] border border-[#2D3748] rounded-lg">
+            <div className="mt-6 p-3 bg-[#0D1117] border border-[#1E3A2F] rounded-lg">
               <p className="text-[#6B7280] text-xs leading-relaxed">
                 Calculations are for informational purposes only. Consult a qualified CA for personalised tax advice.
               </p>
@@ -90,13 +90,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-[#2D3748] flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="mt-10 pt-6 border-t border-[#1E3A2F] flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-[#6B7280] text-xs">
             © 2026 TaxWisely.in — All rights reserved
           </p>
           <div className="flex items-center gap-4">
             <span className="text-[#6B7280] text-xs">Last updated: April 2026</span>
-            <span className="text-[#2D3748]">|</span>
+            <span className="text-[#1E3A2F]">|</span>
             <span className="text-[#6B7280] text-xs">FY 2025-26</span>
           </div>
         </div>

@@ -25,8 +25,8 @@ export default function FAQSection({ faqs, title = "Frequently Asked Questions" 
             key={i}
             className={`border rounded-xl overflow-hidden transition-all duration-200 ${
               openIndex === i
-                ? "border-[#3B82F6]/40 bg-[#1A1D27]"
-                : "border-[#2D3748] bg-[#1A1D27] hover:border-[#3B82F6]/30"
+                ? "border-[#00D4AA]/40 bg-[#0D1117]"
+                : "border-[#1E3A2F] bg-[#0D1117] hover:border-[#00D4AA]/30"
             }`}
           >
             <button
@@ -36,7 +36,7 @@ export default function FAQSection({ faqs, title = "Frequently Asked Questions" 
             >
               <span
                 className={`text-sm font-medium pr-4 ${
-                  openIndex === i ? "text-[#3B82F6]" : "text-white"
+                  openIndex === i ? "text-[#00D4AA]" : "text-white"
                 }`}
               >
                 {faq.question}
@@ -44,7 +44,7 @@ export default function FAQSection({ faqs, title = "Frequently Asked Questions" 
               <ChevronDown
                 size={18}
                 className={`shrink-0 text-[#9CA3AF] transition-transform duration-200 ${
-                  openIndex === i ? "rotate-180 text-[#3B82F6]" : ""
+                  openIndex === i ? "rotate-180 text-[#00D4AA]" : ""
                 }`}
               />
             </button>
